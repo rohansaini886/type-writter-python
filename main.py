@@ -4,7 +4,7 @@ import os
 import string
 
 def clear():
-    time.sleep(1)
+    time.sleep(0.25)
     if os.name == 'nt':
         _ = os.system('cls')
 
@@ -21,11 +21,14 @@ def typing_tips():
     else:
         exit()
     
-    
-
 def typing_practice():
-    print("Hello world")
-    pass
+    decision = input("[Want to try short, long paragraph:- 's/l' ] ")
+
+    if decision == "s":
+        file = open('paragraph.txt', 'r')
+        Lines = file.readlines()
+        print(random.choice(Lines))
+
 
 def typing_test():
     print("Hello world")
